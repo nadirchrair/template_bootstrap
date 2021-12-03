@@ -1,0 +1,128 @@
+/* linkit template FROM ULTRASDZCODER */
+
+:root{
+    --soft-color:#3f3d56;
+    --aniamtion-set: 3s ease-in-out;
+}
+section{
+    margin: 1em auto;
+}
+.nav-link:hover{
+    color: var(--bs-primary) !important;
+}
+.btn-soft{
+    border-color: #e6e6e6;
+    color: var(--soft-color) !important;
+}
+#features .card{
+height: 350px;
+    overflow: hidden;
+}
+.lists{
+    list-style: none;
+font-size: 1.2rem;
+color: var(--bs-success);
+display: grid;
+grid-template-columns: repeat(2,1fr);
+}
+.lists li::before{
+
+    content: "✔️ ";
+}
+.img-control{
+    transform: rotateX(355deg) rotateY(74deg) rotateZ(3deg) rotateY(326deg) translate3d(0,0,20px) !important;
+}
+#shape{
+    background-color: #e6e6e6;
+    padding: 3em;
+    position: relative;
+}
+#shape::before{
+    position: absolute;
+    top: -38%;
+    right: 0;
+    z-index: -9999;
+    content: "";
+    clip-path: polygon(100% 10% ,100% 100% ,0 100%,0 23%);
+    background-color: #e6e6e6;
+    height: 187px;
+    width: 100%;
+}
+.social li a .fab{
+color: gray;
+text-decoration: none;
+}
+.up-animation:hover{
+     transform: translateY(-5px);
+     transition: transform .5 ease  ;
+}
+.toleft {
+    animation: toleftAnimation var(--aniamtion-set);
+}
+
+.toright {
+    animation: torightAnimation var(--aniamtion-set);
+}
+
+.toup {
+    animation: toupAnimation var(--aniamtion-set);
+}
+
+.todown {
+    animation: todownAnimation var(--aniamtion-set);
+}
+@keyframes toleftAnimation {
+    from {
+        opacity: .25;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes torightAnimation {
+    from {
+        opacity: .25;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes toupAnimation {
+    from {
+        opacity: .25;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes todownAnimation {
+    from {
+        opacity: .25;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width:780px) {
+    #shape::before{
+        top: -10%;
+    }
+}
